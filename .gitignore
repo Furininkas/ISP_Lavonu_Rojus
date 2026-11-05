@@ -1,0 +1,22 @@
+# backend
+bin/
+obj/
+.vs/
+*.user
+appsettings.Development.json
+backend/wwwroot/uploads/*
+!backend/wwwroot/uploads/.gitkeep
+
+# frontend
+node_modules/
+.next/
+out/
+next-env.d.ts
+
+# misc
+.env
+.env.*
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
