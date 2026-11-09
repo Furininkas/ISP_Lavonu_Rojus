@@ -1,0 +1,4 @@
+import Link from 'next/link';
+import { AppShell } from '../components/AppShell';
+const entries = [['2026-11-12', '10:00', 'Atsisveikinimo ceremonija', 'Vilnius'], ['2026-11-14', '13:30', 'Transportavimo paslauga', 'Kaunas'], ['2026-11-18', '11:00', 'Atminimo ceremonija', 'Klaipėda']];
+export default function SchedulePage() { return <AppShell><section className="app-heading"><div><p className="section-kicker">Tvarkaraštis</p><h1>Planuojami darbai</h1></div><p>Vienoje vietoje matomi artėjantys užsakymai ir paslaugų vykdymo laikas.</p></section><section className="schedule"><div className="schedule-head"><span>Data</span><span>Laikas</span><span>Paslauga</span><span>Vieta</span></div>{entries.map(e => <div className="schedule-row" key={e.join()}>{e.map(x => <span key={x}>{x}</span>)}</div>)}</section><Link className="button button-primary export-button" href="/tvarkarastis/eksportas">Eksportuoti tvarkaraštį</Link></AppShell>; }

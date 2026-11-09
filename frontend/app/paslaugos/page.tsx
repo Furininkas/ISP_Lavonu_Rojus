@@ -1,13 +1,4 @@
 import Link from 'next/link';
-import { SiteHeader } from '../components/SiteHeader';
-import { SiteFooter } from '../components/SiteFooter';
-
-const items = [
-  ['Laidotuvių organizavimas', 'Paslaugų pasirinkimas, datos, laiko ir vietos suderinimas vienoje vietoje.'],
-  ['Palaikų transportavimas', 'Patogus maršruto planavimas tarp pasirinktų paslaugų vietų.'],
-  ['Atminimo priminimai', 'Svarbių datų priminimai ir susijusių paslaugų rekomendacijos.'],
-];
-
-export default function ServicesPage() {
-  return <><SiteHeader /><main className="public-page"><section className="public-hero"><div className="container"><p className="section-kicker">Paslaugos</p><h1>Pagalba kiekviename<br /><em>svarbiame žingsnyje.</em></h1><p>Aiškiai pateiktos paslaugos padeda pasirūpinti svarbiausiais sprendimais jums patogiu tempu.</p></div></section><section className="container public-grid">{items.map(([title, text], i) => <article key={title}><span>0{i + 1}</span><h2>{title}</h2><p>{text}</p></article>)}</section><section className="public-cta"><div className="container"><p className="section-kicker light">Pasiruošę pradėti?</p><h2>Susipažinkite su mūsų<br /><em>paslaugomis.</em></h2><Link className="button button-primary" href="/prisijungti">Prisijungti <span>→</span></Link></div></section></main><SiteFooter /></>;
-}
+import { AppShell } from '../components/AppShell';
+import { formatPrice, services } from '../lib/catalog-data';
+export default function ServicesPage() { return <AppShell><section className="app-heading"><div><p className="section-kicker">Paslaugų sąrašo langas</p><h1>Paslaugos</h1></div><p>Peržiūrėkite paslaugos informaciją arba sukurkite naują paslaugą.</p></section><div className="order-actions"><Link className="button button-primary" href="/paslaugos/nauja">Kurti paslaugą</Link></div><section className="catalog-grid">{services.map((item, i) => <article className="catalog-card" key={item.id}><span>0{i + 1}</span><p className="card-meta">{item.meta}</p><h2>{item.title}</h2><p>{item.description}</p><strong>{formatPrice(item.price)}</strong><Link href={`/paslaugos/${item.id}`}>Peržiūrėti paslaugą <span>→</span></Link></article>)}</section></AppShell>; }

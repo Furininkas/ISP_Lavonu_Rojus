@@ -90,8 +90,8 @@ namespace LavonuRojus.Migrations
                     b.Property<DateOnly?>("GimimoData")
                         .HasColumnType("date");
 
-                    b.Property<DateTime?>("PaskutinioPrisijungimoData")
-                        .HasColumnType("timestamp with time zone");
+                    b.Property<DateOnly?>("PaskutinioPrisijungimoData")
+                        .HasColumnType("date");
 
                     b.Property<string>("Pavarde")
                         .IsRequired()
@@ -105,8 +105,8 @@ namespace LavonuRojus.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<DateTime>("SukurimoData")
-                        .HasColumnType("timestamp with time zone");
+                    b.Property<DateOnly>("SukurimoData")
+                        .HasColumnType("date");
 
                     b.Property<string>("TelefonoNr")
                         .HasColumnType("text");
@@ -140,9 +140,6 @@ namespace LavonuRojus.Migrations
 
                     b.Property<decimal>("Kaina")
                         .HasColumnType("numeric");
-
-                    b.Property<string>("Nuotrauka")
-                        .HasColumnType("text");
 
                     b.Property<string>("Pavadinimas")
                         .IsRequired()

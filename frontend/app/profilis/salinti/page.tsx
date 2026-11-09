@@ -1,0 +1,3 @@
+import Link from 'next/link';
+import { AppShell } from '../../components/AppShell';
+export default function DeleteProfilePage() { return <AppShell><section className="screen-form"><Link className="back-link" href="/profilis">← Grįžti į profilį</Link><p className="section-kicker">Patvirtinimas</p><h1>Ištrinti profilį?</h1><p className="screen-intro">Šis veiksmas pašalins paskyros informaciją. Ar tikrai norite tęsti?</p><div className="success-panel"><Link className="button button-purple" href="/prisijungti">Patvirtinti ištrynimą →</Link><Link className="back-link" href="/profilis">Atšaukti</Link></div></section></AppShell>; }

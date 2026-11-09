@@ -1,0 +1,4 @@
+'use client';
+import Link from 'next/link';
+import { useState } from 'react';
+export function ProductSearch() { const [query, setQuery] = useState(''); const [searched, setSearched] = useState(false); const found = query.toLowerCase().includes('žvak') || !query; return <><form className="search-form" onSubmit={e => { e.preventDefault(); setSearched(true); }}><input value={query} onChange={e => setQuery(e.target.value)} placeholder="Įveskite prekės pavadinimą" /><button className="button button-primary">Ieškoti</button></form>{searched && (found ? <article className="search-result"><h2>Atminimo žvakė</h2><p>Rasta kataloge · 12,00 €</p><Link href="/prekes/atminimo-zvake">Peržiūrėti prekę →</Link></article> : <article className="search-result"><h2>Prekių nerasta</h2><p>Pabandykite pakeisti paieškos žodį.</p></article>)}</>; }
