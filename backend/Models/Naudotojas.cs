@@ -12,9 +12,9 @@ public class Naudotojas
     public string? TelefonoNr { get; set; }
     public NaudotojoTipas Tipas { get; set; }
     public string? AsmKodas { get; set; }
-    public DateTime SukurimoData { get; set; } = DateTime.UtcNow;
+    public DateOnly SukurimoData { get; set; } = DateOnly.FromDateTime(DateTime.UtcNow);
     public bool Busena { get; set; } = true;
-    public DateTime? PaskutinioPrisijungimoData { get; set; }
+    public DateOnly? PaskutinioPrisijungimoData { get; set; }
     public string? Adresas { get; set; }
 
     public List<Velionis> Velioniai { get; set; } = new();

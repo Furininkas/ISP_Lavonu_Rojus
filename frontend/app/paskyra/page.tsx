@@ -1,0 +1,2 @@
+import { DashboardView } from '../components/DashboardView';
+export default function AccountPage() { return <DashboardView title="Mano paskyra" description="Čia rasite savo užsakymus, priminimus ir asmeninę informaciją." cards={[["Aktyvūs užsakymai", "1", "Ceremonija lapkričio 18 d."], ["Priminimai", "2", "Kitos svarbios datos"], ["Išsaugotos prekės", "3", "Peržiūrėkite vėliau"]]} action={{ href: '/paskyra/priminimai', label: 'Peržiūrėti priminimus' }} />; }

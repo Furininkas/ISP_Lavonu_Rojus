@@ -1,0 +1,2 @@
+import { DashboardView } from '../components/DashboardView';
+export default function ProviderPage() { return <DashboardView title="Tiekėjo erdvė" description="Čia galite valdyti savo paslaugas ir peržiūrėti gaunamus užsakymus." cards={[["Aktyvios paslaugos", "6", "Matomos kataloge"], ["Nauji užsakymai", "3", "Reikia patvirtinimo"], ["Šio mėnesio pajamos", "1 240 €", "Nuo mėnesio pradžios"]]} />; }

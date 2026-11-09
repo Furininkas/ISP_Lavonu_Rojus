@@ -10,8 +10,6 @@ public class Paslauga
     public string? Vieta { get; set; }
     public int TrukmeMin { get; set; }
     public bool Busena { get; set; } = true;
-    public string? Nuotrauka { get; set; }
-
     public int TiekejasId { get; set; }
     public Tiekejas? Tiekejas { get; set; }
 }
